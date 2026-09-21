@@ -13,6 +13,8 @@ mengembangkan ide mereka sendiri.
 
 ## 1. Tema dan Konsep Chatbot
 
+### Tema Chatbot : Asisten Penulis Pemula
+
 ### Nama Chatbot
 
 **Penaria — Creative Writing Companion**
@@ -152,3 +154,6 @@ Chatbot-Penaria/
 └── data/
     └── conversation/
         └── conversation.json
+```
+### Bagian yang Dibantu AI Assistant
+1. Brainstroming konsep chatbot Penaria
