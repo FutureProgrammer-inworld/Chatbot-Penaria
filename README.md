@@ -155,5 +155,229 @@ Chatbot-Penaria/
     └── conversation/
         └── conversation.json
 ```
+### Pemjelasan Strutur File
+**app.py**
+merupakan file utama dalam projet chatbot-Penaria ini dan menjadi backend Flask berada. 
+File ini memiliki beberapa tugas antara lain :
+1. Menjalankan Backend Flask
+2. Membaca API Groq
+3. Membuat koneksi ke Groq
+4. Mengelola Conversation history
+5. Mengirim request ke LLM
+6. Memberikan response kepada Frontend
+7. Menyimpan Conversation History ke file json yang berada di folder data/conversation
+8. memuat kembali histori ketika aplikasi dijalankan
+**Prompts/system_prompt.py**
+adalah file yang berisi promt yang akan menentukan role, indentisa, dan tugas dari model LLM, serta batasannya dan gaya komunikasi yang digunakan (LLM) dalam project Chatbot-Penaria
+system_prompt dipisahakan dari app.py agar lebih mudah dibaca dan dikembangkan dikemudian hari.
+**templates/**
+adalah folder yang berisi seluruh file html dalam project, antara lain:
+
+1. index.html : file html yang mengatur tampilan halaman "Chat with Penaria"(halaman chatbot)
+2. writing_arena.html : file yang mengatur tampilan halaman "arena tulis", tempat penulis dapat menulisa draf karyanya dan akan disimpan dalam lokal, serta ada opsi tulis judul dan perhitungan jumlah karakter dan kata.
+3. genre_guide.html : file yang mengatur tampilan halaman "Genre Guide", berisi overview dari 9 genre dan tips pengembangannya
+4. publishing_guide : file yang mengantur tampilan halaman "Publishing Guide", tempat overview lokasi upload karya unntuk pemula **(jumlah web upload karya bisa ditambah)**
+**static/css/style.css**
+berisi styling dan lanyout dari keseluruhan website Penaria, dengan palet warna utama adalah Ungu, Biru, Hitam, dan Emas.
+**static/js/app.js**
+Mengatur interaksi halaman "Chat with Penaria", dimana file ini akan bertanggung jawab atas:
+1. Pengiriman pesan user <=> Penaria
+2. request ke endpoint /chat
+3. menampilkan pesan user
+4. menampilkan response Penaria
+5. typing indikator (icon pena bulu akan memudar dan bergerak halus, akan muncul titik 3 bergerak di percakapan Penaria)
+6. auto scroll
+7. Pengiriman pesan dengan tombol enter (pindah baris : Shift + Enter)
+**static/js/writing_arena.js**
+Mengatur interaksi arena tulis, dengan fitur fitur yang dingani sebagai berikut :
+1. word counter
+2. chracter counter
+3. menyimpan draf
+4. memuat draf
+5. status draf
+**static/images/penaria.png**
+ilustrasi dari ikon penari. Ikon ini akan digunakan pada sidebar, hearder chat, chat bubble Penaria
+**data/conversation/conversation.json**
+digunaan untuk menyimapan convbersation history dan membacanya kembali
+gambaran isi file:
+```text
+[
+  {
+    "role": "user",
+    "content": "..."
+  },
+  {
+    "role": "assistant",
+    "content": "..."
+  }
+]
+```
+## 4. Cara Menjalankan Program ##
+**Requirements**
+Pastikan suah terinstall:
+1. Python 3x
+2. pip
+3. Git
+**Step 1- Clone atau Dowload Reopository-Chatbot-Penaria**
+```text
+git clone <URL-REPOSITORY
+```
+Kemudian masuk ke folder project:
+``` text
+cd Chatbot-Penaria
+```
+jika project sudah ada di komputer, langsung buka terminal pada folder project tersebut.
+**Step 2-Membuat Virtual Environment**
+Buat Virtual Environment di windows:
+```text
+python -m venv venv
+```
+aktifkan virtual environtment dengan 
+```text
+venv\Scripts\Activate
+```
+jika berhasil akan muncul tanda 
+```text
+(venv)
+```
+dipojok kiri sebelah path folder pada terminal
+***Step 3- Install Dependencies**
+```text
+ip install -r requirments.txt
+```
+**Step 4- Membuat API Key**
+project ini menggunakan Groq API
+buat file 
+```text
+.env
+```
+di folder utama project
+isinya adalah 
+```text
+GROQ_API_KEY=MASUKKAN_API_KEY_KAMU_DI_SINI
+```
+Ganti bagian tersebut dengan API Key milik mu. Jangan sampai API KEy mu di push ke github.
+taruh .env mu di .gitignore.
+
+**Step 5- Isi .gitignore**
+```text
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+data/conversation/conversation.json
+
+*.tmp
+```
+Hasil conversation juga tidak dipush ke github karena berkemungkinan besar berisi histori percakapan yang pribadi. namun tenang file ini akan otomatis tercipta saat terjadinya percakapan antara Penaria dengan user.
+**Step 6- Menjalankan Flask**
+beralih ke terminal dan jalankan berikut:
+```text
+pythonb app.py
+```
+Jika berhasil, Flask akan menampilkan alamat server, misalnya:
+```text
+Running on http://127.0.0.1:5000
+```
+salin link tersebut ke browser kesayangan Anda
+## 5. Cara Menggunakan Website Chatbot-Penaria
+setelah website berhasil diakses, akan muncul 4 menu utama pada sidebar. Menu pertama dan menjadi halaman utama projek ini akan otomatis terbuka, yaitu Chat with Penaria.
+
+**Chat with Penaria**
+digunakan untuk berdiskusi dengan penaria sebagai Assistant Penulis Pemula yang akan memberikan saran, kritik, dan masukan kepada penulis untuk emngembangakan ceritanya.
+contoh 
+```text
+Aku ingin membuat cerita fantasy tentang seorang penyihir muda.
+Bantu aku mengembangkan konflik utamanya.
+```
+Kemudian Penariia akan membantu mengembangkan ide tersebut.
+
+**Arena Tulis**
+digunakan sebagai tempat penulis menuliskan draf cerita
+
+pengguna dpaat mengakses beebrapa fitur dari halaman ini, antara lain;
+1. Memasukkan judul
+2. Menulis cerita
+3. Melihat jumlah kata
+4. Melihat jumlah karakter
+5. Menyimpan draf cerita
+Draf akan disimpan pada bowser menggunakan **localstroge**
+
+**Genre Guide**
+Digunakan sebagai referensi ketika pengguna ingin memahami karakteristik
+suatu genre.
+
+**Publishing Guide**
+Digunakan sebagai referensi awal mengenai pilihan platform publikasi karya
+digital seperti Trakteer dan KaryaKarsa.
+
+## 6. Conversation History
+Penaria menggunakan conversation history agar AI dapat mempertahankan konteks percakapan 
+alurnya:
+```text
+User
+  ↓
+Frontend JavaScript
+  ↓
+POST /chat
+  ↓
+Flask
+  ↓
+conversation_history
+  ↓
+Groq API
+  ↓
+Penaria
+  ↓
+Response
+  ↓
+conversation_history
+  ↓
+conversation.json
+```
+Ketika website dijalankan
+```text
+conversation.json
+       ↓
+load_conversation()
+       ↓
+conversation_history
+       ↓
+Groq API
+```
+denagn demikian, conversation history dapat dimuat kembali setelah website dimatikan dan dijalankan ulang
+
+## 7. Contoh Percakapan dan Screenshot
+Berikut adalah contoh **pecakapan awal**
+![Chat with Penaria](SS percobaan/
+
+
+
+
 ### Bagian yang Dibantu AI Assistant
 1. Brainstroming konsep chatbot Penaria
+2. pengembangan karakter dan persona Penaria
+3. penyusunan system prompt
+4. pembuatan struktur Flask
+5. implementasi koneksi Groq API
+6. implementasi conversation history
+7. implementasi penyimpanan JSON
+8. pembuatan endpoint API
+9. debugging error pada Flask dan Groq API
+10. pengembangan HTML, CSS, dan JavaScript
+11. pengembangan layout dan UI
+12. penyusunan dokumentasi project
+
+### Bagian yang Dilakuakn Mahasiswa
+1. menentukan konsep Penaria
+2. menentukan tujuan chatbot
+3. menentukan fitur aplikasi
+4. menentukan struktur halaman
+5. menentukan karakter dan personality Penaria
+6. menentukan genre yang ditampilkan
+7. menentukan isi Genre Guide
+8. menentukan isi Publishing Guide
+9. melakukan pengujian aplikasi
+10. melakukan debugging dan menyesuaikan kode
