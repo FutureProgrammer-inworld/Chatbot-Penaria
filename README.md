@@ -363,31 +363,40 @@ denagn demikian, conversation history dapat dimuat kembali setelah website dimat
 
 ## 7. Contoh Percakapan dan Screenshot
 **1. pecakapan awal dan Loading**
+
 ![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 094548.png)
 
 **2. hasil percakapanan**
+
 ![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 094617.png)
 
 **3. conversation dalam satu sesi yang sama**
+
 ![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 102459.png)
 
 **4. Conversation berbeda sesi**
 Saat percakapan pengguna memperkenalkan dirinya sebagai **nana**
+
 ![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112839.png)
 
 user meminta namanya untuk diingat
+
 ![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112858.png)
 
-**Pergantian sesi** (dimatikan dan dihidupkan kembali) User menanyakan namanya kembali
+**Pergantian sesi** (dimatikan dan dihidupkan kembali) User menanyakan namanya kembali)
+
 ![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 112953.png.png)
 
 **Tampilan Arena Tulis**
+
 ![Arena Tulis](SS percobaan/Screenshot 2026-09-21 100506.png)
 
 **Tampilan Genre Guide**
+
 ![Genre Guide](SS percobaan/Screenshot 2026-09-21 100521.png)
 
 **Tampilan Publishing Guide**
+
 ![Publishing Guide](SS percobaan/Screenshot 2026-09-21 100538.png)
 
 ## 8. Arsitektur "Chat with Penaria" Secara Sederhana
