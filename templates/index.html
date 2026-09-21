@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Penaria — Master of Stories</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="brand">
+                    <img
+                        src="{{ url_for('static', filename='images/penaria.png') }}"
+                        alt="Penaria"
+                        class="brand-avatar"
+                    >
+
+                    <div>
+                        <h1>PENARIA</h1>
+                        <span>Master of Stories</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                    <a href="/" class="menu-item">
+                        <span>🪶</span>
+
+                    <span class="menu-text">
+                        <strong>Chat with Penaria</strong>
+                        <small>Talk, brainstorm, develop your story</small>
+                    </span>
+                </a>
+
+
+                    <a href="/arena_tulis" class="menu-item">
+                         <span>✒️</span>
+
+                    <span class="menu-text">
+                        <strong>Arena Tulis</strong>
+                        <small>Write and review your work</small>
+                    </span>
+                </a>
+
+
+                <a href="/genre_guide" class="menu-item">
+                    <span class="menu-icon">📚</span>
+
+                    <span class="menu-text">
+                        <strong>Genre Guide</strong>
+                        <small>Explore story genres</small>
+                    </span>
+                </a>
+
+
+                <a href="/publishing_guide" class="menu-item">
+                    <span class="menu-icon">🌐</span>
+
+                    <span class="menu-text">
+                        <strong>Publishing Guide</strong>
+                        <small>Explore writing platforms</small>
+                    </span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <div class="inkbound-label">
+                    ✦ INKBOUND WORLD
+                </div>
+
+                <p>
+                    Where every story<br>
+                    begins with a spark.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="chat-header">
+
+                <div class="header-character">
+
+                    <img
+                        src="{{ url_for('static', filename='images/penaria.png') }}"
+                        alt="Penaria"
+                        class="header-avatar"
+                    >
+
+                    <div>
+                        <h2>Chat with Penaria</h2>
+                        <p>Your creative writing companion</p>
+                    </div>
+
+                </div>
+
+                <div class="header-status">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                </div>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+
+            <section class="chat-area" id="chatArea">
+
+
+                <!-- PENARIA MESSAGE -->
+
+                <div class="message-row penaria-message">
+
+                    <img
+                        src="{{ url_for('static', filename='images/penaria.png') }}"
+                        alt="Penaria"
+                        class="chat-avatar"
+                    >
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Penaria
+                        </div>
+
+                        <div class="chat-bubble">
+
+                            <p>
+                                Halo, Storyteller! ✨
+                            </p>
+
+                            <p>
+                                Aku Penaria, Master of Stories.
+                                Ceritakan padaku ide yang sedang
+                                berputar di kepalamu.
+                            </p>
+
+                            <p>
+                                Kita bisa mengembangkan karakter,
+                                menyusun plot, mencari ide, atau
+                                sekadar mengatasi <i>Frozen Ink</i>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- INPUT AREA -->
+
+            <footer class="chat-input-area">
+
+                <form id="chatForm" class="chat-form">
+
+                    <textarea
+                        id="messageInput"
+                        name="message"
+                        placeholder="Tulis sesuatu kepada Penaria..."
+                        rows="1"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        id="sendButton"
+                        class="send-button"
+                        aria-label="Kirim pesan"
+                    >
+                            <svg
+                                class="feather-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M20.5 3.5C16.2 3.4 11.7 4.8 8.5 8
+                                    C6.1 10.4 5.1 13.2 5 16.5
+                                    C8.3 16.4 11.1 15.4 13.5 13
+                                    C16.7 9.8 18.1 5.3 17.9 3.5"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+
+                                <path
+                                    d="M5 16.5L3.5 20.5L7.5 19L13.5 13"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+
+                                <path
+                                    d="M8 13.5L11 16.5"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+
+                    </button>
+
+                </form>
+
+                <p class="input-hint">
+                    Tekan Enter untuk mengirim · Shift + Enter untuk baris baru
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

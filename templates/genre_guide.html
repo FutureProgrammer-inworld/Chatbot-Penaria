@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Genre Guide — Penaria</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="inner-page">
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <img
+                src="{{ url_for('static', filename='images/penaria.png') }}"
+                alt="Penaria"
+                class="sidebar-avatar"
+            >
+
+            <div>
+                <h1>Penaria</h1>
+                <p>Master of Stories</p>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="/" class="menu-item">
+                <span>🪶</span>
+                <span>Chat with Penaria</span>
+            </a>
+
+            <a href="/arena_tulis" class="menu-item">
+                <span>✒️</span>
+                <span>Arena Tulis</span>
+            </a>
+
+            <a href="/genre_guide" class="menu-item active">
+                <span>📚</span>
+                <span>Genre Guide</span>
+            </a>
+
+            <a href="/publishing_guide" class="menu-item">
+                <span>🌐</span>
+                <span>Publishing Guide</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <div class="inkbound-label">
+                    ✦ INKBOUND WORLD
+            </div>
+            <p>
+                Every story begins<br>
+                with the role.
+            </p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content genre-workspace">
+
+        <!-- HEADER -->
+        <header class="page-header">
+
+            <div class="page-title-row">
+
+                <span class="page-title-icon">
+                    📚
+                </span>
+
+                <div>
+                    <h2>Genre Guide</h2>
+
+                    <p>
+                        Kenali karakteristik genre dan temukan
+                        suasana yang cocok untuk ceritamu.
+                    </p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- GENRE CONTENT -->
+        <section class="genre-container">
+
+            <div class="genre-intro">
+
+                <h3>Choose your story's world</h3>
+
+                <p>
+                    Setiap genre memiliki cara berbeda untuk membangun
+                    konflik, karakter, suasana, dan pengalaman pembaca.
+                    Gunakan panduan ini sebagai titik awal untuk
+                    menemukan arah ceritamu.
+                </p>
+
+            </div>
+
+
+            <!-- GENRE GRID -->
+            <div class="genre-grid">
+
+
+                <!-- FANTASY -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">🪄</div>
+
+                    <div class="genre-content">
+
+                        <h3>Fantasy</h3>
+
+                        <p>
+                            Dunia imajinatif yang dipenuhi sihir,
+                            makhluk fantastis, atau aturan dunia
+                            yang berbeda dari realitas.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Bangun aturan dunia yang konsisten
+                            agar dunia fantasimu terasa hidup.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MYSTERY -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">🔍</div>
+
+                    <div class="genre-content">
+
+                        <h3>Mystery</h3>
+
+                        <p>
+                            Cerita yang berpusat pada teka-teki,
+                            rahasia, petunjuk, dan usaha karakter
+                            untuk menemukan kebenaran.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Berikan petunjuk secara bertahap
+                            dan biarkan pembaca ikut menebak.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SCIENCE FICTION -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">🚀</div>
+
+                    <div class="genre-content">
+
+                        <h3>Science Fiction</h3>
+
+                        <p>
+                            Cerita yang mengeksplorasi teknologi,
+                            ilmu pengetahuan, masa depan, atau
+                            kemungkinan dunia yang berbeda.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Pikirkan bagaimana teknologi dalam
+                            ceritamu memengaruhi kehidupan karakter.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ROMANCE -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">❤️</div>
+
+                    <div class="genre-content">
+
+                        <h3>Romance</h3>
+
+                        <p>
+                            Cerita yang berfokus pada hubungan,
+                            perkembangan perasaan, dan perjalanan
+                            emosional antarkarakter.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Bangun hubungan melalui interaksi
+                            dan perkembangan karakter yang natural.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HORROR -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">👻</div>
+
+                    <div class="genre-content">
+
+                        <h3>Horror</h3>
+
+                        <p>
+                            Cerita yang membangun rasa takut,
+                            ketegangan, ketidakpastian, atau
+                            suasana yang mengganggu.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Suasana dan rasa tidak pasti sering
+                            lebih efektif daripada sekadar kejutan.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ADVENTURE -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">⚔️</div>
+
+                    <div class="genre-content">
+
+                        <h3>Adventure</h3>
+
+                        <p>
+                            Cerita tentang perjalanan, eksplorasi,
+                            tantangan, dan pengalaman baru yang
+                            dihadapi karakter.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Pastikan setiap perjalanan memberikan
+                            sesuatu yang mengubah karakter.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SLICE OF LIFE -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">☕</div>
+
+                    <div class="genre-content">
+
+                        <h3>Slice of Life</h3>
+
+                        <p>
+                            Cerita yang berfokus pada kehidupan
+                            sehari-hari, hubungan antarmanusia,
+                            dan momen sederhana.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Konflik tidak harus besar. Karakter
+                            dan momen kecil bisa menjadi kekuatan utama.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SCHOOL -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">🎒</div>
+
+                    <div class="genre-content">
+
+                        <h3>School</h3>
+
+                        <p>
+                            Cerita yang berfokus pada kehidupan
+                            sekolah, persahabatan, kegiatan belajar,
+                            dan perkembangan karakter.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Gunakan lingkungan sekolah untuk
+                            memperkuat hubungan dan konflik karakter.
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COMEDY -->
+                <article class="genre-card">
+
+                    <div class="genre-icon">😂</div>
+
+                    <div class="genre-content">
+
+                        <h3>Comedy</h3>
+
+                        <p>
+                            Cerita yang menggunakan humor melalui
+                            situasi, dialog, kepribadian karakter,
+                            atau kejadian yang tidak terduga.
+                        </p>
+
+                        <div class="genre-tip">
+                            <strong>Tip:</strong>
+                            Kenali kepribadian karakter agar humor
+                            terasa natural dan tidak dipaksakan.
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

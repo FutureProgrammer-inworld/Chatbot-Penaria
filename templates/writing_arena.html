@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arena Tulis — Penaria</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="inner-page">
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <img
+                src="{{ url_for('static', filename='images/penaria.png') }}"
+                alt="Penaria"
+                class="sidebar-avatar"
+            >
+
+            <div>
+                <h1>Penaria</h1>
+                <p>Master of Stories</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="/" class="menu-item">
+                <span>🪶</span>
+                <span>Chat with Penaria</span>
+            </a>
+
+            <a href="/arena_tulis" class="menu-item active">
+                <span>✒️</span>
+                <span>Arena Tulis</span>
+            </a>
+
+            <a href="/genre_guide" class="menu-item">
+                <span>📚</span>
+                <span>Genre Guide</span>
+            </a>
+
+            <a href="/publishing_guide" class="menu-item">
+                <span>🌐</span>
+                <span>Publishing Guide</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="inkbound-label">
+                    ✦ INKBOUND WORLD
+            </div>
+            <p>Every story begins<br>
+                with a blank page.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content writing-workspace">
+
+        <!-- HEADER -->
+        <header class="page-header">
+
+            <div>
+                <div class="page-title-row">
+                    <span class="page-title-icon">✒️</span>
+
+                    <div>
+                        <h2>Arena Tulis</h2>
+
+                        <p>
+                            Ruang untuk menulis dan mengembangkan
+                            draft ceritamu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="draft-status" id="draftStatus">
+                <span class="status-dot"></span>
+                Draft belum disimpan
+            </div>
+
+        </header>
+
+
+        <!-- WRITING AREA -->
+        <section class="writing-container">
+
+            <!-- TITLE -->
+            <input
+                type="text"
+                id="draftTitle"
+                class="draft-title"
+                placeholder="Judul ceritamu..."
+                autocomplete="off"
+            >
+
+
+            <!-- EDITOR -->
+            <div class="editor-wrapper">
+
+                <textarea
+                    id="draftEditor"
+                    class="draft-editor"
+                    placeholder="Mulai tulis ceritamu di sini..."
+                    spellcheck="true"
+                ></textarea>
+
+            </div>
+
+
+            <!-- EDITOR FOOTER -->
+            <div class="editor-footer">
+
+                <div class="editor-info">
+
+                    <span>
+                        <strong id="wordCount">0</strong> kata
+                    </span>
+
+                    <span class="editor-divider">•</span>
+
+                    <span>
+                        <strong id="characterCount">0</strong> karakter
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="saveDraftButton"
+                    class="save-draft-button"
+                >
+                    <span>💾</span>
+                    Simpan Draft
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/writing_arena.js') }}"></script>
+
+</body>
+</html>

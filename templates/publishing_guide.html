@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publishing Guide — Penaria</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="inner-page">
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <img
+                src="{{ url_for('static', filename='images/penaria.png') }}"
+                alt="Penaria"
+                class="sidebar-avatar"
+            >
+
+            <div>
+                <h1>Penaria</h1>
+                <p>Master of Stories</p>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="/" class="menu-item">
+                <span>🪶</span>
+                <span>Chat with Penaria</span>
+            </a>
+
+            <a href="/arena_tulis" class="menu-item">
+                <span>✒️</span>
+                <span>Arena Tulis</span>
+            </a>
+
+            <a href="/genre_guide" class="menu-item">
+                <span>📚</span>
+                <span>Genre Guide</span>
+            </a>
+
+            <a href="/publishing_guide" class="menu-item active">
+                <span>🌐</span>
+                <span>Publishing Guide</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <div class="inkbound-label">
+                    ✦ INKBOUND WORLD
+            </div>
+            <p>
+                Every story deserves<br>
+            a place to be heard
+            </p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content publishing-workspace">
+
+        <!-- HEADER -->
+        <header class="page-header">
+
+            <div class="page-title-row">
+
+                <span class="page-title-icon">
+                    🌐
+                </span>
+
+                <div>
+                    <h2>Publishing Guide</h2>
+
+                    <p>
+                        Kenali beberapa pilihan untuk membawa
+                        ceritamu bertemu dengan pembaca.
+                    </p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <section class="publishing-container">
+
+            <!-- INTRO -->
+            <div class="publishing-intro">
+
+                <div class="publishing-intro-icon">
+                    ✨
+                </div>
+
+                <div>
+                    <h3>Your story deserves a place to be read.</h3>
+
+                    <p>
+                        Setelah draft selesai dan direvisi, langkah
+                        berikutnya adalah menentukan bagaimana dan
+                        di mana kamu ingin membagikan karya tersebut.
+                        Setiap platform memiliki karakteristik dan
+                        ketentuan yang berbeda.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PLATFORM SECTION -->
+            <section class="publishing-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            PUBLISHING OPTIONS
+                        </span>
+
+                        <h3>Tempat untuk membagikan karyamu</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="platform-grid">
+
+
+                    <!-- TRAKTEER -->
+                    <article class="platform-card">
+
+                        <div class="platform-header">
+
+                            <div class="platform-icon">
+                                ☕
+                            </div>
+
+                            <div>
+                                <h3>Trakteer</h3>
+
+                                <span>
+                                    Creator support & digital content
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <p class="platform-description">
+                            Platform yang memungkinkan kreator
+                            mendapatkan dukungan dari audiens serta
+                            membagikan berbagai jenis konten dan
+                            produk digital.
+                        </p>
+
+
+                        <div class="platform-detail">
+
+                            <div>
+                                <span class="detail-label">
+                                    Cocok untuk
+                                </span>
+
+                                <p>
+                                    Kreator yang ingin membangun
+                                    hubungan dengan pembaca dan
+                                    menawarkan konten digital.
+                                </p>
+                            </div>
+
+
+                            <div>
+                                <span class="detail-label">
+                                    Kelebihan
+                                </span>
+
+                                <ul>
+                                    <li>
+                                        Dukungan langsung dari pembaca
+                                    </li>
+
+                                    <li>
+                                        Mendukung berbagai jenis konten
+                                    </li>
+
+                                    <li>
+                                        Memiliki fitur untuk produk digital
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div>
+                                <span class="detail-label">
+                                    Perlu diperhatikan
+                                </span>
+
+                                <p>
+                                    Pelajari biaya layanan, ketentuan
+                                    konten, dan aturan produk sebelum
+                                    menggunakan platform.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="https://trakteer.id/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="platform-link"
+                        >
+                            Kunjungi Trakteer
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- KARYAKARSA -->
+                    <article class="platform-card">
+
+                        <div class="platform-header">
+
+                            <div class="platform-icon">
+                                📖
+                            </div>
+
+                            <div>
+                                <h3>KaryaKarsa</h3>
+
+                                <span>
+                                    Creator support & karya digital
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <p class="platform-description">
+                            Platform untuk kreator membagikan karya
+                            dan mendapatkan dukungan langsung dari
+                            pembaca atau penggemarnya.
+                        </p>
+
+
+                        <div class="platform-detail">
+
+                            <div>
+                                <span class="detail-label">
+                                    Cocok untuk
+                                </span>
+
+                                <p>
+                                    Penulis dan kreator yang ingin
+                                    membagikan karya kepada komunitas
+                                    pembaca secara langsung.
+                                </p>
+                            </div>
+
+
+                            <div>
+                                <span class="detail-label">
+                                    Kelebihan
+                                </span>
+
+                                <ul>
+                                    <li>
+                                        Dukungan langsung dari pembaca
+                                    </li>
+
+                                    <li>
+                                        Mendukung berbagai bentuk karya
+                                    </li>
+
+                                    <li>
+                                        Memiliki ekosistem kreator
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div>
+                                <span class="detail-label">
+                                    Perlu diperhatikan
+                                </span>
+
+                                <p>
+                                    Periksa ketentuan platform dan
+                                    model dukungan yang tersedia
+                                    sebelum mempublikasikan karya.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="https://karyakarsa.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="platform-link"
+                        >
+                            Kunjungi KaryaKarsa
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- CHECKLIST -->
+            <section class="publishing-section checklist-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            BEFORE YOU PUBLISH
+                        </span>
+
+                        <h3>Checklist sebelum publikasi</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="checklist">
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Manuskrip sudah direvisi
+                            </strong>
+
+                            <p>
+                                Baca kembali dan perbaiki bagian
+                                yang masih terasa kurang jelas.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Judul dan sinopsis sudah siap
+                            </strong>
+
+                            <p>
+                                Pastikan pembaca dapat memahami
+                                gambaran cerita dari informasi awal.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Cover sudah disiapkan
+                            </strong>
+
+                            <p>
+                                Sesuaikan ukuran dan format cover
+                                dengan kebutuhan platform.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Format file sudah sesuai
+                            </strong>
+
+                            <p>
+                                Periksa format dan ukuran file
+                                sebelum mengunggah karya.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Deskripsi karya sudah jelas
+                            </strong>
+
+                            <p>
+                                Buat deskripsi yang membantu calon
+                                pembaca memahami cerita.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="check-item">
+                        <span class="check-icon">✓</span>
+
+                        <div>
+                            <strong>
+                                Ketentuan platform sudah dibaca
+                            </strong>
+
+                            <p>
+                                Setiap platform memiliki aturan
+                                dan ketentuan yang berbeda.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FINAL NOTE -->
+            <div class="publishing-note">
+
+                <span>🪶</span>
+
+                <p>
+                    Tidak ada satu cara yang tepat untuk
+                    membagikan cerita. Pilih tempat yang sesuai
+                    dengan tujuan dan jenis karya yang kamu buat.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
