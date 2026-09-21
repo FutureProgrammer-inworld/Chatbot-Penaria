@@ -167,9 +167,11 @@ File ini memiliki beberapa tugas antara lain :
 6. Memberikan response kepada Frontend
 7. Menyimpan Conversation History ke file json yang berada di folder data/conversation
 8. memuat kembali histori ketika aplikasi dijalankan
+
 **Prompts/system_prompt.py**
 adalah file yang berisi promt yang akan menentukan role, indentisa, dan tugas dari model LLM, serta batasannya dan gaya komunikasi yang digunakan (LLM) dalam project Chatbot-Penaria
 system_prompt dipisahakan dari app.py agar lebih mudah dibaca dan dikembangkan dikemudian hari.
+
 **templates/**
 adalah folder yang berisi seluruh file html dalam project, antara lain:
 
@@ -177,8 +179,10 @@ adalah folder yang berisi seluruh file html dalam project, antara lain:
 2. writing_arena.html : file yang mengatur tampilan halaman "arena tulis", tempat penulis dapat menulisa draf karyanya dan akan disimpan dalam lokal, serta ada opsi tulis judul dan perhitungan jumlah karakter dan kata.
 3. genre_guide.html : file yang mengatur tampilan halaman "Genre Guide", berisi overview dari 9 genre dan tips pengembangannya
 4. publishing_guide : file yang mengantur tampilan halaman "Publishing Guide", tempat overview lokasi upload karya unntuk pemula **(jumlah web upload karya bisa ditambah)**
+
 **static/css/style.css**
 berisi styling dan lanyout dari keseluruhan website Penaria, dengan palet warna utama adalah Ungu, Biru, Hitam, dan Emas.
+
 **static/js/app.js**
 Mengatur interaksi halaman "Chat with Penaria", dimana file ini akan bertanggung jawab atas:
 1. Pengiriman pesan user <=> Penaria
@@ -188,6 +192,7 @@ Mengatur interaksi halaman "Chat with Penaria", dimana file ini akan bertanggung
 5. typing indikator (icon pena bulu akan memudar dan bergerak halus, akan muncul titik 3 bergerak di percakapan Penaria)
 6. auto scroll
 7. Pengiriman pesan dengan tombol enter (pindah baris : Shift + Enter)
+
 **static/js/writing_arena.js**
 Mengatur interaksi arena tulis, dengan fitur fitur yang dingani sebagai berikut :
 1. word counter
@@ -195,8 +200,10 @@ Mengatur interaksi arena tulis, dengan fitur fitur yang dingani sebagai berikut 
 3. menyimpan draf
 4. memuat draf
 5. status draf
+
 **static/images/penaria.png**
 ilustrasi dari ikon penari. Ikon ini akan digunakan pada sidebar, hearder chat, chat bubble Penaria
+
 **data/conversation/conversation.json**
 digunaan untuk menyimapan convbersation history dan membacanya kembali
 gambaran isi file:
@@ -218,6 +225,7 @@ Pastikan suah terinstall:
 1. Python 3x
 2. pip
 3. Git
+
 **Step 1- Clone atau Dowload Reopository-Chatbot-Penaria**
 ```text
 git clone <URL-REPOSITORY
@@ -227,6 +235,7 @@ Kemudian masuk ke folder project:
 cd Chatbot-Penaria
 ```
 jika project sudah ada di komputer, langsung buka terminal pada folder project tersebut.
+
 **Step 2-Membuat Virtual Environment**
 Buat Virtual Environment di windows:
 ```text
@@ -241,10 +250,12 @@ jika berhasil akan muncul tanda
 (venv)
 ```
 dipojok kiri sebelah path folder pada terminal
+
 ***Step 3- Install Dependencies**
 ```text
 ip install -r requirments.txt
 ```
+
 **Step 4- Membuat API Key**
 project ini menggunakan Groq API
 buat file 
@@ -282,6 +293,7 @@ Jika berhasil, Flask akan menampilkan alamat server, misalnya:
 Running on http://127.0.0.1:5000
 ```
 salin link tersebut ke browser kesayangan Anda
+
 ## 5. Cara Menggunakan Website Chatbot-Penaria
 setelah website berhasil diakses, akan muncul 4 menu utama pada sidebar. Menu pertama dan menjadi halaman utama projek ini akan otomatis terbuka, yaitu Chat with Penaria.
 
@@ -350,12 +362,116 @@ Groq API
 denagn demikian, conversation history dapat dimuat kembali setelah website dimatikan dan dijalankan ulang
 
 ## 7. Contoh Percakapan dan Screenshot
-Berikut adalah contoh **pecakapan awal**
-![Chat with Penaria](SS percobaan/
+**1. pecakapan awal dan Loading**
+![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 094548.png)
 
+**2. hasil percakapanan**
+![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 094617.png)
 
+**3. conversation dalam satu sesi yang sama**
+![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 102459.png)
 
+**4. Conversation berbeda sesi**
+Saat percakapan pengguna memperkenalkan dirinya sebagai **nana**
+![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112839.png)
 
+user meminta namanya untuk diingat
+![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112858.png)
+
+**Pergantian sesi** (dimatikan dan dihidupkan kembali) User menanyakan namanya kembali
+![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 112953.png.png)
+
+**Tampilan Arena Tulis**
+![Arena Tulis](SS percobaan/Screenshot 2026-09-21 100506.png)
+
+**Tampilan Genre Guide**
+![Genre Guide](SS percobaan/Screenshot 2026-09-21 100521.png)
+
+**Tampilan Publishing Guide**
+![Publishing Guide](SS percobaan/Screenshot 2026-09-21 100538.png)
+
+## 8. Arsitektur "Chat with Penaria" Secara Sederhana
+```text
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   HTML / CSS / JS   │
+                    │      Frontend       │
+                    └──────────┬──────────┘
+                               │
+                         POST /chat
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │       Flask         │
+                    │      app.py         │
+                    └──────────┬──────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+                 ▼                           ▼
+        ┌─────────────────┐       ┌──────────────────┐
+        │  System Prompt  │       │ Conversation     │
+        │ system_prompt.py│       │ History JSON     │
+        └────────┬────────┘       └────────┬─────────┘
+                 │                         │
+                 └────────────┬────────────┘
+                              ▼
+                    ┌─────────────────────┐
+                    │      Groq API       │
+                    │  GPT-OSS 120B       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Penaria        │
+                    │      Response       │
+                    └─────────────────────┘
+```
+## 9. System Prompt
+System prompt digunakan untuk memberikan identitas dan aturan kepada
+Penaria.
+
+System prompt menentukan beberapa hal seperti:
+1. Identitas Penaria sebagai Master of story dari InkWorld 
+2. Peran sebagai Creative Writting Companion (assistant Penulis Pemula)
+3. kepribadian
+4. Gaya Komunikasi
+5. Bahasa yang Digunakan
+6. Jenis Bantuan yang Diberikan
+7. Konsep dunia Penaria (inkWorld)
+8. Batasan agar Penaria Tetap Berfungsi Sebagai Writing Companion
+
+## 10. Error Handling
+Project juga memiliki error handling untuk beberapa kondisi.
+Contohnya:
+Pesan kosong
+Jika user mengirim pesan kosong, server akan memberikan response:
+```text
+{
+  "success": false,
+  "error": "Pesan tidak boleh kosong."
+}
+```
+dengan http status 400
+
+**Request Tidak Valid**
+Jika request tidak valid
+```text
+{
+  "success": false,
+  "error": "Request tidak berisi data JSON."
+}
+```
+**Error API/ Server**
+Jika terjadi masalah ketika menghubungi Groq, aplikasi akan memberikan
+pesan error kepada frontend tanpa menampilkan API key atau informasi
+sensitif kepada pengguna.
+
+## 11. Penggunaan AI Assistant
 ### Bagian yang Dibantu AI Assistant
 1. Brainstroming konsep chatbot Penaria
 2. pengembangan karakter dan persona Penaria
