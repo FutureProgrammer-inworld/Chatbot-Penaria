@@ -388,7 +388,7 @@ Pengguna kemudian meminta Penaria untuk mengingat namanya.
 
 Setelah aplikasi dimatikan dan dihidupkan kembali, pengguna menanyakan namanya kembali.
 
-![Conversation setelah pergantian sesi](SS%20percobaan/Screenshot%202026-09-21%20112953.png.png)
+![Conversation setelah pergantian sesi](SS%20percobaan/Screenshot%202026-09-21%20112953.png)
 
 ### 5. Arena Tulis
 
