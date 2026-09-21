@@ -362,42 +362,45 @@ Groq API
 denagn demikian, conversation history dapat dimuat kembali setelah website dimatikan dan dijalankan ulang
 
 ## 7. Contoh Percakapan dan Screenshot
-**1. pecakapan awal dan Loading**
+## Screenshot / Cuplikan Aplikasi
 
-![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 094548.png)
+### 1. Percakapan Awal dan Loading
 
-**2. hasil percakapanan**
+![Percakapan awal dan loading](SS%20percobaan/Screenshot%202026-09-21%20094548.png)
 
-![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 094617.png)
+### 2. Hasil Percakapan
 
-**3. conversation dalam satu sesi yang sama**
+![Hasil percakapan](SS%20percobaan/Screenshot%202026-09-21%20094617.png)
 
-![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 102459.png)
+### 3. Conversation dalam Satu Sesi yang Sama
 
-**4. Conversation berbeda sesi**
-Saat percakapan pengguna memperkenalkan dirinya sebagai **nana**
+![Conversation dalam satu sesi](SS%20percobaan/Screenshot%202026-09-21%20102459.png)
 
-![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112839.png)
+### 4. Conversation Berbeda Sesi
 
-user meminta namanya untuk diingat
+Pada percakapan, pengguna memperkenalkan dirinya sebagai **Nana**.
 
-![Chat with Penaria](SS percobaan/SS percobaan/Screenshot 2026-09-21 112858.png)
+![Pengguna memperkenalkan nama](SS%20percobaan/Screenshot%202026-09-21%20112839.png)
 
-**Pergantian sesi** (dimatikan dan dihidupkan kembali) User menanyakan namanya kembali)
+Pengguna kemudian meminta Penaria untuk mengingat namanya.
 
-![Chat with Penaria](SS percobaan/Screenshot 2026-09-21 112953.png.png)
+![Pengguna meminta nama diingat](SS%20percobaan/Screenshot%202026-09-21%20112858.png)
 
-**Tampilan Arena Tulis**
+Setelah aplikasi dimatikan dan dihidupkan kembali, pengguna menanyakan namanya kembali.
 
-![Arena Tulis](SS percobaan/Screenshot 2026-09-21 100506.png)
+![Conversation setelah pergantian sesi](SS%20percobaan/Screenshot%202026-09-21%20112953.png.png)
 
-**Tampilan Genre Guide**
+### 5. Arena Tulis
 
-![Genre Guide](SS percobaan/Screenshot 2026-09-21 100521.png)
+![Arena Tulis](SS%20percobaan/Screenshot%202026-09-21%20100506.png)
 
-**Tampilan Publishing Guide**
+### 6. Genre Guide
 
-![Publishing Guide](SS percobaan/Screenshot 2026-09-21 100538.png)
+![Genre Guide](SS%20percobaan/Screenshot%202026-09-21%20100521.png)
+
+### 7. Publishing Guide
+
+![Publishing Guide](SS%20percobaan/Screenshot%202026-09-21%20100538.png)
 
 ## 8. Arsitektur "Chat with Penaria" Secara Sederhana
 ```text
